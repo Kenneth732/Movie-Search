@@ -37,7 +37,11 @@ const Movie = () => {
     setSearchTerm(e.target.value);
   };
 
+  return (
+    <div className="movie-search-app">
 
+    </div>
+  );
 };
 
 export default Movie;
