@@ -50,6 +50,21 @@ const Movie = () => {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
+
+      <div className="movie-list">
+        {movies.length > 0 ? (
+          movies.map((movie) => (
+            <div key={movie.imdbID} className="movie-item">
+              <h3>{movie.Title}</h3>
+              <p>Year: {movie.Year}</p>
+              <p>Type: {movie.Type}</p>
+              <img src={movie.Poster} alt={movie.Title} />
+            </div>
+          ))
+        ) : (
+          <p>{errorMessage}</p>
+        )}
+      </div>
     </div>
   );
 };
