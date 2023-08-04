@@ -39,7 +39,17 @@ const Movie = () => {
 
   return (
     <div className="movie-search-app">
+      <h2>Movie Search App</h2>
 
+      <div className="search-form">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchInputChange}
+          placeholder="Enter a movie title"
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
     </div>
   );
 };
