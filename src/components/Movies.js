@@ -11,6 +11,10 @@ const Movie = () => {
   const [movies, setMovies] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
+  const handleSearch = () => {
+    if (searchTerm.trim() === '') {
+      return;
+    }
 
 
 
