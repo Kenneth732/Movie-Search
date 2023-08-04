@@ -33,6 +33,9 @@ const Movie = () => {
       });
   };
 
+  const handleSearchInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
 
 };
