@@ -16,6 +16,23 @@ const Movie = () => {
       return;
     }
 
+    fetch(`${api}s=${searchTerm}&${apiKey}&type=movie&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.Search) {
+          setMovies(data.Search);
+          setErrorMessage('');
+        } else {
+          setMovies([]);
+          setErrorMessage('No results found.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setErrorMessage('An error occurred. Please try again later.');
+      });
+  };
+
 
 
 };
